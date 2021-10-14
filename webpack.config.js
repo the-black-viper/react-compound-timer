@@ -1,28 +1,27 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  entry: './src/components/Timer/Timer',
-  mode: 'production',
+  entry: "./src/components/Timer/Timer",
+  mode: "production",
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'index.js',
-    libraryTarget: 'commonjs2',
+    path: path.resolve(__dirname, "build"),
+    filename: "index.js",
   },
   resolve: {
     alias: {
-      src: path.resolve(__dirname, 'src'),
+      src: path.resolve(__dirname, "src"),
     },
-    extensions: ['.ts', '.tsx'],
+    extensions: [".ts", ".tsx"],
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
+        loader: "ts-loader",
       },
     ],
   },
   externals: {
-    react: 'commonjs react',
+    react: "commonjs react",
   },
 };
